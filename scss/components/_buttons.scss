@@ -1,0 +1,41 @@
+// Buttons
+.btn--default,
+.btn--success,
+.btn--error,
+.btn--warning,
+.btn--info {
+  color: $white;
+  border-radius: 0.25em;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn--default:hover,
+.btn--success:hover,
+.btn--error:hover,
+.btn--warning:hover,
+.btn--info:hover {
+  cursor: pointer;
+}
+
+.btn--default {
+  background-color: map-get($color-button, 'default');
+}
+
+.btn--success {
+  background-color: map-get($color-button, 'success');
+}
+
+.btn--error {
+  background-color: map-get($color-button, 'error');
+}
+
+.btn--warning {
+  background-color: map-get($color-button, 'warning');
+}
+
+.btn--info {
+  background-color: map-get($color-button, 'info');
+}

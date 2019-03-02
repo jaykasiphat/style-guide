@@ -1,0 +1,28 @@
+// Typography
+.container {
+  color: $color-body;
+}
+
+.link {
+  color: $color-secondary;
+  font-weight: bold;
+}
+
+.blockquote {
+  border-left: 7px solid $color-primary;
+  border-radius: 0.25em;
+  padding-left: 1em;
+  margin-left: 0.8em;
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.headline--primary {
+  color: $color-primary;
+  padding-left: 0.5em;
+}
+
+.headline--secondary {
+  font-weight: normal;
+}

@@ -1,0 +1,22 @@
+// Navigation
+.nav {
+  display: flex;
+  flex-direction: column;
+  @include mq('md') {
+    flex-direction: row;
+  }
+}
+
+.nav a {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  padding: 0.7em;
+  border-radius: 0.25em;
+}
+
+.nav a:hover {
+  background-color: $color-primary;
+  color: $white;
+}
