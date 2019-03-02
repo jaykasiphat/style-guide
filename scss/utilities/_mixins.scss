@@ -1,0 +1,17 @@
+// Media Query
+@mixin mq($size) {
+  $value: map-get($breakpoints, $size);
+  $sm: map-get($breakpoints, 'sm');
+
+  @if $value < $sm {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}

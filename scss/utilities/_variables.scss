@@ -1,0 +1,49 @@
+// Descriptive color variables
+$white      : #fff;
+$grey       : #828282;
+$turquoise  : #7fdec2;
+$sky-blue   : #7ad8f8;
+$green      : #7ec989;
+$red        : #d67b7c;
+$orange     : #ec7f5f;
+$purple     : #8e7dbc;
+
+// Functional color variables
+$color-body       : $grey;
+
+$color-primary    : $turquoise;
+$color-secondary  : $sky-blue;
+
+// Button color variables
+$color-button: (
+  'default': $sky-blue,
+  'success': $green,
+  'error'  : $red,
+  'warning': $orange,
+  'info'   : $purple,
+);
+
+// Grid color variables
+$color-grid: (
+  '1': lighten($grey, 10%),
+  '2': darken($turquoise, 20%),
+  '3': lighten($purple, 20%),
+  '4': lighten($sky-blue, 10%),
+  '5': lighten($green, 10%),
+  '6': darken($sky-blue, 30%),
+  '7': lighten($red, 10%),
+  '8': lighten($orange, 10%),
+  '9': lighten($purple, 40%),
+  '10': darken($orange, 20%),
+  '11': lighten($orange, 5%),
+  '12': lighten($turquoise, 20%),
+);
+
+// Breakpoints
+$breakpoints: (
+  'xs': 575px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+);
