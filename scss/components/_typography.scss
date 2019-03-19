@@ -4,8 +4,7 @@
 }
 
 .link {
-  color: $color-secondary;
-  font-weight: bold;
+  @extend %link;
 }
 
 .blockquote {
@@ -25,4 +24,5 @@
 
 .headline--secondary {
   font-weight: normal;
+  font-weight: $font-weight--light;
 }

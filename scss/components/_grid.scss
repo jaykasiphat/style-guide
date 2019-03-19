@@ -6,9 +6,14 @@
 // but additional styling may be needed
 // **********************************************
 
+// .centered {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
 .container {
-  width: 90%;  
-  margin: auto;
+  @include center();
+  width: 90%;
   @include mq('sm') {
     padding-left: 0;
     padding-right: 0;
@@ -48,6 +53,9 @@
         // from the  media query
         margin-top: 10px;
         flex-basis: 100%;
+        border-radius: $br-rounded;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
 
         // NOTE: replace with media query mixin if aiming for exceeds
         @media (min-width: 768px) {
@@ -77,14 +85,9 @@
   }
 }
 
-
-.grid__row {
-  padding: 1em 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.grid__col--12 {
-  display: flex;
-  flex-direction: column;
+// grid color
+@each $num, $color in $color-grid {
+  .grid__col--#{$num}.theme__colors {
+    background-color: $color;
+  }
 }

@@ -1,7 +1,6 @@
 // Forms
 .form {
-  display: flex;
-  flex-direction: column;
+  @include flex($dir: column);
   padding-top: 2rem;
 }
 

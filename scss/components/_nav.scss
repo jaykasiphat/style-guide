@@ -1,22 +1,11 @@
 // Navigation
 .nav {
-  display: flex;
-  flex-direction: column;
-  @include mq('md') {
-    flex-direction: row;
+  @include flex($dir: column);
+  @include mq('md') {    
+    @include flex($dir: row);
   }
 }
 
-.nav a {
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  color: inherit;
-  padding: 0.7em;
-  border-radius: 0.25em;
-}
-
-.nav a:hover {
-  background-color: $color-primary;
-  color: $white;
+.nav__item a {
+  @extend %nav-item-link;
 }

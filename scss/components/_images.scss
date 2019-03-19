@@ -5,8 +5,8 @@
 }
 
 .img--frame {
+  @extend %img-border;
   width: 100%;
-  border: 1px solid $color-body;
   padding: 0.5em;
 }
 

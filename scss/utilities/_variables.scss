@@ -1,42 +1,58 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font stacks
+$font-family--primary : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font weights
+$font-weight--thin    : 100;
+$font-weight--light   : 300;
+$font-weight--medium  : 400;
+$font-weight--bold    : 700;
+
+// Letter spacing
+$letter-spacing : 0.3px;
+
 // Descriptive color variables
 $white      : #fff;
 $grey       : #828282;
-$turquoise  : #7fdec2;
-$sky-blue   : #7ad8f8;
-$green      : #7ec989;
-$red        : #d67b7c;
-$orange     : #ec7f5f;
-$purple     : #8e7dbc;
+$bermuda    : #7fdec2;  //turquoise
+$malibu     : #7ad8f8;  //blue
+$deyork     : #7ec989;  //green
+$nypink     : #d67b7c;  //pink
+$sienna     : #ec7f5f;  //orange
+$majesty    : #8e7dbc;  //purple
 
 // Functional color variables
 $color-body       : $grey;
 
-$color-primary    : $turquoise;
-$color-secondary  : $sky-blue;
+$color-primary    : $bermuda;
+$color-secondary  : $malibu;
 
 // Button color variables
-$color-button: (
-  'default': $sky-blue,
-  'success': $green,
-  'error'  : $red,
-  'warning': $orange,
-  'info'   : $purple,
+$color-ui: (
+  'default': $malibu,
+  'success': $deyork,
+  'error'  : $nypink,
+  'warning': $sienna,
+  'info'   : $majesty,
 );
 
 // Grid color variables
 $color-grid: (
-  '1': lighten($grey, 10%),
-  '2': darken($turquoise, 20%),
-  '3': lighten($purple, 20%),
-  '4': lighten($sky-blue, 10%),
-  '5': lighten($green, 10%),
-  '6': darken($sky-blue, 30%),
-  '7': lighten($red, 10%),
-  '8': lighten($orange, 10%),
-  '9': lighten($purple, 40%),
-  '10': darken($orange, 20%),
-  '11': lighten($orange, 5%),
-  '12': lighten($turquoise, 20%),
+  '1': darken($grey, 10%),
+  '2': darken($bermuda, 20%),
+  '3': lighten($majesty, 20%),
+  '4': lighten($malibu, 10%),
+  '5': lighten($deyork, 10%),
+  '6': darken($malibu, 28%),
+  '7': lighten($nypink, 10%),
+  '8': lighten($sienna, 10%),
+  '9': lighten($majesty, 40%),
+  '10': darken($sienna, 20%),
+  '11': lighten($sienna, 5%),
+  '12': darken($bermuda, 4%),
 );
 
 // Breakpoints
@@ -47,3 +63,6 @@ $breakpoints: (
   'lg': 992px,
   'xl': 1200px,
 );
+
+// Border radius
+$br-rounded: 0.25em;

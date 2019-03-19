@@ -1,4 +1,8 @@
-// Media Query
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// Media queries
 @mixin mq($size) {
   $value: map-get($breakpoints, $size);
   $sm: map-get($breakpoints, 'sm');
@@ -14,4 +18,18 @@
       @content;
     }
   }
+}
+
+// Flexbox
+@mixin flex($dis: flex, $dir: null, $wrap: null, $jus: null) {
+  display: $dis;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $jus;
+}
+
+// Center item
+@mixin center() {
+  margin-left: auto;
+  margin-right: auto;
 }
