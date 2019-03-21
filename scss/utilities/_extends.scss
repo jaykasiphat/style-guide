@@ -9,6 +9,12 @@
 }
 
 // Images
+%img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 %img-border {
   border: 1px solid $color-body;
 }
@@ -19,7 +25,7 @@
   text-align: center;
   display: block;
   color: inherit;
-  padding: 0.7em;
+  padding: 0.8em 1em;
   &:hover {
     background-color: $color-primary;
     color: $white;

@@ -27,9 +27,3 @@
   flex-wrap: $wrap;
   justify-content: $jus;
 }
-
-// Center item
-@mixin center() {
-  margin-left: auto;
-  margin-right: auto;
-}

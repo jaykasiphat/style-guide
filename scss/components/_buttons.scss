@@ -1,10 +1,18 @@
+// ==========================================================================
 // Buttons
+// ==========================================================================
+
 .btn--default,
 .btn--success,
 .btn--error,
 .btn--warning,
 .btn--info {
   @extend %btn;
+  @include mq(lg) {
+    padding-left: 2.3rem;
+    padding-right: 2.3rem;
+    margin-bottom: 0.5em;
+  }
 }
 
 @each $key, $value in $color-ui {

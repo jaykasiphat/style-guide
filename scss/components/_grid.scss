@@ -6,14 +6,10 @@
 // but additional styling may be needed
 // **********************************************
 
-// .centered {
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
 .container {
-  @include center();
+  margin: auto;
   width: 90%;
+  max-width: $max-width;
   @include mq('sm') {
     padding-left: 0;
     padding-right: 0;
@@ -53,9 +49,11 @@
         // from the  media query
         margin-top: 10px;
         flex-basis: 100%;
-        border-radius: $br-rounded;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
+
+        display: flex;
+        flex-direction: column;
 
         // NOTE: replace with media query mixin if aiming for exceeds
         @media (min-width: 768px) {
@@ -65,6 +63,9 @@
 
           // make column width a percentage of the column number / total columns
           flex-basis: #{$i / 12 * 100 + "%"} ;
+
+          flex-direction: row;
+          justify-content: space-evenly;
         }
       }
     }
@@ -89,5 +90,11 @@
 @each $num, $color in $color-grid {
   .grid__col--#{$num}.theme__colors {
     background-color: $color;
+    border-radius: $br-rounded;
   }
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
 }

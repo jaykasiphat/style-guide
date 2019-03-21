@@ -1,17 +1,22 @@
+// ==========================================================================
 // Images
+// ==========================================================================
+
 .img--logo {
-  display: block;
-  margin: 0.5em auto;
+  @extend %img;
+  @include mq(md) {
+    padding-top: 1.2em;
+  }
 }
 
 .img--frame {
+  @extend %img;
   @extend %img-border;
-  width: 100%;
-  padding: 0.5em;
+  padding: 10px;
+  max-width: 100%;
 }
 
 .img--avatar {
-  padding-top: 1.2em;
-  display: block;
-  margin: auto;
+  @extend %img;
+  margin-top: 1em;
 }
