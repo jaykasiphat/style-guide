@@ -1,22 +1,18 @@
-// ==========================================================================
+// ============================================
 // Buttons
-// ==========================================================================
+// ============================================
 
-.btn--default,
-.btn--success,
-.btn--error,
-.btn--warning,
-.btn--info {
+[class^=btn--] {
   @extend %btn;
-  @include mq(lg) {
-    padding-left: 2.3rem;
-    padding-right: 2.3rem;
-    margin-bottom: 0.5em;
+  @include mq(md) {
+    flex: 1;
+    margin-left: em(16px);
+    margin-right: em(16px);
   }
 }
 
-@each $key, $value in $color-ui {
-  .btn--#{$key} {
-    background-color: $value;
+@each $type, $color in $color-ui {
+  .btn--#{$type} {
+    background-color: $color;
   }
 }

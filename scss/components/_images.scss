@@ -1,22 +1,20 @@
-// ==========================================================================
+// ============================================
 // Images
-// ==========================================================================
+// ============================================
 
-.img--logo {
-  @extend %img;
-  @include mq(md) {
-    padding-top: 1.2em;
+.img {
+  &--logo {
+    @extend %img;
+    @include mq(md) {
+      padding-top: em(19px);
+    }
   }
-}
-
-.img--frame {
-  @extend %img;
-  @extend %img-border;
-  padding: 10px;
-  max-width: 100%;
-}
-
-.img--avatar {
-  @extend %img;
-  margin-top: 1em;
+  &--frame {
+    @extend %img;
+    @extend %img-border;
+    padding: em(10px);
+  }
+  &--avatar {
+    @extend %img;
+  }
 }

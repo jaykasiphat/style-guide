@@ -1,19 +1,18 @@
-// ==========================================================================
+// ============================================
 // Navigation
-// ==========================================================================
+// ============================================
 
 .nav {
   @include flex($dir: column);
   @include mq('md') {
     @include flex($dir: row, $jus: center);
-    padding-top: 1.2em;
+    padding-top: em(20px);
   }
-}
-
-.nav__item a {
-  @extend %nav-item-link;
-  @include mq('lg') {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+  &__item a {
+    @extend %nav-item-link;
+    @include mq('lg') {
+      margin-left: em(8px);
+      margin-right: em(8px);
+    }
   }
 }

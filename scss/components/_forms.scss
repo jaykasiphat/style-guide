@@ -1,20 +1,18 @@
-// ==========================================================================
+// ============================================
 // Forms
-// ==========================================================================
+// ============================================
 
 .form {
   @include flex($dir: column);
-  padding-top: 2rem;
-}
-
-.form__label--hidden {
-  display: none;
-}
-
-.form__input {
-  border: none;
-  outline: 0;
-  border-bottom: 5px solid $color-primary;
-  padding: 1em;
-  margin: 1em 0 1em;
+  flex: 1;
+  &__label--hidden {
+    display: none;
+  }
+  &__input {
+    border: none;
+    outline: 0;
+    border-bottom: 5px solid $color-primary;
+    padding: em(16px);
+    margin: em(16px) em(24px);
+  }
 }
