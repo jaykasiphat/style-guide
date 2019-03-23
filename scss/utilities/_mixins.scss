@@ -1,6 +1,6 @@
-// ==========================================================================
+// ============================================
 // Mixins
-// ==========================================================================
+// ============================================
 
 // Media queries
 @mixin mq($size) {
@@ -21,9 +21,10 @@
 }
 
 // Flexbox
-@mixin flex($dis: flex, $dir: null, $wrap: null, $jus: null) {
+@mixin flex($dis: flex, $dir: null, $wrap: null, $jus: null, $alni: null) {
   display: $dis;
   flex-direction: $dir;
   flex-wrap: $wrap;
   justify-content: $jus;
+  align-items: $alni;
 }

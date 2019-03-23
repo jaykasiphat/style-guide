@@ -1,6 +1,6 @@
-// ==========================================================================
+// ============================================
 // Extends
-// ==========================================================================
+// ============================================
 
 // Links
 %link {
@@ -13,6 +13,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
 }
 
 %img-border {
@@ -25,7 +26,7 @@
   text-align: center;
   display: block;
   color: inherit;
-  padding: 0.8em 1em;
+  padding: em(13px) em(16px);
   &:hover {
     background-color: $color-primary;
     color: $white;
@@ -34,12 +35,12 @@
 
 // Buttons
 %btn {
-  border-radius: $br-rounded;
   color: $white;
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: none;
   text-transform: uppercase;
+  padding: em(13px);
+  margin-bottom: em(16px);
+  border: none;
+  border-radius: $br-rounded;
   &:hover {
     cursor: pointer;
     opacity: 0.8;
