@@ -1,10 +1,8 @@
-// **********************************************
-// _grid.scss
+// ============================================
+// Grid
 // styles related to the grid system and
 // main container.
-// major grid styles have been added here for you
-// but additional styling may be needed
-// **********************************************
+// ============================================
 
 .container {
   margin: auto;
@@ -20,22 +18,22 @@
 
 // grid base class
 .grid {
-
-  // .grid__row
   &__row {
-    padding: 1em 10px;
-    display: flex;
-    flex-direction: column;
+    padding: em(16px) em(10px);
+    @include flex($dir: column);
+    @include mq(md) {
+      @include flex($dir: row);
+    }
 
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
-      flex-direction: row;
+    &:last-child {
+      margin-bottom: 2rem;
+      @include mq(md) {
+        margin-bottom: 5rem;
+      }
     }
   }
 
-  // .grid__col
   &__col {
-
     // create grid columns dynamically
     // loop through each column size
     @for $i from 1 through 12 {
@@ -45,43 +43,28 @@
       &--#{$i} {
 
         // base styles applied to all grid columns
-        // NOTE: could be converted to a placeholder, along with margin
-        // from the  media query
-        margin-top: 10px;
+        @include flex($dir: column);
+        margin-top: em(10px);
         flex-basis: 100%;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
+        padding: em(8px);
 
-        display: flex;
-        flex-direction: column;
-
-        // NOTE: replace with media query mixin if aiming for exceeds
-        @media (min-width: 768px) {
-
+        @include mq(md) {
           // base stlyes applied to all grid columns
           margin-top: 0;
-
+          @include flex($dir: row, $jus: space-evenly, $alni: flex-start);
           // make column width a percentage of the column number / total columns
           flex-basis: #{$i / 12 * 100 + "%"} ;
-
-          flex-direction: row;
-          justify-content: space-evenly;
         }
       }
     }
   }
 }
 
-// targets all elements with classes that begin with grid__col
 [class^=grid__col] {
   // grid__col + grid__col, targets two sibling columns
   & + & {
-
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
-
-      // add grid gutter
-      margin-left: 10px;
+    @include mq(md) {
+      margin-left: 10px; // add grid gutter
     }
   }
 }
@@ -95,6 +78,8 @@
 }
 
 .centered {
-  margin-left: auto;
-  margin-right: auto;
+  @include mq(md) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
